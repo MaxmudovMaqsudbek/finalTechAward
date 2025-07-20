@@ -41,7 +41,7 @@ const Header = () => {
         <div className="flex items-center h-12">
           {/* Logo and Menu */}
           <div className="px-4 flex items-center">
-            <span className="text-green-600 font-bold text-xl">Qlik</span>
+            {/* <span className="text-green-600 font-bold text-xl">Qlik</span> */}
             <button 
               ref={menuButtonRef}
               onClick={handleMenuClick}
@@ -66,14 +66,14 @@ const Header = () => {
           </div>
 
           {/* Dropdown */}
-          <div className="px-4 flex-1">
+          {/* <div className="px-4 flex-1">
             <div className="flex items-center justify-between">
               <select className="text-sm bg-transparent outline-none cursor-pointer">
                 <option>12. Етап закупівель (2024-2025) - Purchasing stage (2024...</option>
               </select>
               <ChevronDown className="w-4 h-4 text-gray-600" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Menu Dropdown */}

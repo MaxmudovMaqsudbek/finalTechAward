@@ -177,7 +177,7 @@ const Header = () => {
         <div className="flex items-center h-12">
           {/* Logo and Menu */}
           <div className="px-4 flex items-center">
-            <span className="text-green-600 dark:text-green-400 font-bold text-xl dark-transition">Qlik</span>
+            {/* <span className="text-green-600 dark:text-green-400 font-bold text-xl dark-transition">Qlik</span> */}
             <button 
               ref={menuButtonRef}
               onClick={handleMenuClick}
@@ -202,16 +202,16 @@ const Header = () => {
           </div>
 
           {/* Dropdown */}
-          <div className="flex-2 px-32">
+          {/* <div className="flex-2 px-32">
             <div className="flex items-center justify-start">
               <select className="text-sm bg-transparent dark:bg-transparent text-gray-900 dark:text-slate-100 outline-none cursor-pointer dark-transition">
                 <option className="bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100">
                   12. Етап закупівель (2024-2025) - Purchasing stage (2024...
                 </option>
               </select>
-              {/* <ChevronDown className="w-4 h-4 text-gray-600 dark:text-slate-300" /> */}
+            
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Menu Dropdown */}
