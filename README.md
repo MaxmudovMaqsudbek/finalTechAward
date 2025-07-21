@@ -219,7 +219,7 @@ VITE_NODE_ENV=staging
 ```
 tech/
 ├── public/                     # Static assets
-│   └── vite.svg               # Vite logo
+│   └── logoEq.svg               # Eq1 logo
 ├── src/                       # Source code
 │   ├── App.jsx               # Main application component
 │   ├── main.jsx              # Application entry point
