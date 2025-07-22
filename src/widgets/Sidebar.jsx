@@ -59,8 +59,15 @@ export const Sidebar = ({ activePage, setActivePage }) => {
 
   return (
     <aside className={`flex flex-col bg-white dark:bg-gray-800 transition-all duration-300 ease-in-out shadow-lg z-30 ${isSidebarExpanded ? 'w-44' : 'w-22'}`}>
-      <div className={`flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 h-[85px]`}>
-        {isSidebarExpanded ? ( <span className="pl-4 text-gray-800 dark:text-white"><img className="w-16 h-16" src="../../public/logoEq.png" alt="Equilibrium Logo" /> Equilibrium</span>):(<img src="../../public/logoEq.png" alt="Equilibrium Logo" />)}
+      <div className={`flex  items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 h-[85px]`}>
+        {isSidebarExpanded ? ( 
+          <span className="pl-4 text-gray-800 dark:text-white flex flex-col items-center gap-1">
+            <img className="w-12 h-12" src="/logoEq.png" alt="Equilibrium Logo" /> 
+            <span className="text-lg font-medium">Equilibrium</span>
+          </span>
+        ) : (
+          <img className="w-12 h-12" src="/logoEq.png" alt="Equilibrium Logo" />
+        )}
       </div>
       <nav className="flex-1 px-4 py-4 space-y-4">
         {navItems.map((item) => (
@@ -72,8 +79,8 @@ export const Sidebar = ({ activePage, setActivePage }) => {
           </a>
         ))}
       </nav>
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-         <button onClick={toggleSidebar} className="p-3 w-full flex justify-center items-center rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+      <div className="p-4 border-t border-gray-200 dark:border-gray-700 cursor-pointer">
+         <button onClick={toggleSidebar} className="p-3 w-full flex justify-center items-center rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
             {isSidebarExpanded ? <ChevronLeft size={30} /> : <ChevronRight size={30} />}
         </button>
       </div>
