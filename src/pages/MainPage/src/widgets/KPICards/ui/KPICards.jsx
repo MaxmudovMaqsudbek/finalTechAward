@@ -23,7 +23,7 @@ const KPICards = ({ kpiData }) => {
   }, [setSelectedKPI]);
 
   return (
-    <div className="grid grid-cols-5 gap-4">
+    <div className="grid xl:grid-cols-5 gap-4 lg:grid-cols-5 md:grid-cols-3">
       {kpiCards.map((kpi) => (
         <KPICard
           key={kpi.id}

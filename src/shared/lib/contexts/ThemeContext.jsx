@@ -8,7 +8,7 @@ export const useTheme = () => useContext(ThemeContext);
 // Theme Provider (app/providers/ThemeProvider.jsx)
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
-  const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
   const toggleTheme = () => {
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));

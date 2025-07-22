@@ -26,7 +26,7 @@ const DataVisualization = ({ barDataByKPI, kpiData }) => {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid lg:grid-cols-2 gap-6 md:grid-cols-1">
       <BarChartComponent 
         data={getChartData()} 
         title={getChartTitle()}

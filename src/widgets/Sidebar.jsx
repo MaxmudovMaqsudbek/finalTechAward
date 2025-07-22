@@ -60,7 +60,7 @@ export const Sidebar = ({ activePage, setActivePage }) => {
   return (
     <aside className={`flex flex-col bg-white dark:bg-gray-800 transition-all duration-300 ease-in-out shadow-lg z-30 ${isSidebarExpanded ? 'w-44' : 'w-22'}`}>
       <div className={`flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 h-[85px]`}>
-        {isSidebarExpanded && <span className="text-2xl font-bold text-gray-800 dark:text-white">Dashboard</span>}
+        {isSidebarExpanded ? ( <span className="pl-4 text-gray-800 dark:text-white"><img className="w-16 h-16" src="../../public/logoEq.png" alt="Equilibrium Logo" /> Equilibrium</span>):(<img src="../../public/logoEq.png" alt="Equilibrium Logo" />)}
       </div>
       <nav className="flex-1 px-4 py-4 space-y-4">
         {navItems.map((item) => (

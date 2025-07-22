@@ -16,7 +16,7 @@ const KPICard = memo(({ id, title, value, unit, trend, isSelected, onClick }) =>
     <div 
       onClick={() => onClick(id)}
       className={cn(
-  "relative overflow-hidden border-t-2 cursor-pointer transition-all duration-200 hover:border-t-[#4779AB] dark:border-t-gray-800",
+  "relative overflow-hidden border-t-2 cursor-pointer transition-all duration-200 hover:border-t-[#4779AB] dark:border-t-gray-800 lg:w-44 xl:w-54 gap-4",
   isSelected && "border-t-[#4779AB] dark:bg-[#13304d]",
   !isSelected && "border-t-gray-100 "
 )}

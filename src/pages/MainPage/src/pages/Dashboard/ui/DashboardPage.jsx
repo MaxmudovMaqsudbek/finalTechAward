@@ -341,7 +341,7 @@ const DashboardPage = () => {
       <div className="h-10 bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 px-6 flex items-center justify-between dark-transition">
         {/* Left side - Search */}
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300">
+          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 relative">
             {/* Search icon in dotted rectangle */}
             <button
               onClick={toggleSearchInput}
@@ -360,8 +360,8 @@ const DashboardPage = () => {
                   placeholder="Search dashboard data..."
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  className={`border-none outline-none bg-transparent text-gray-700 dark:text-slate-200 placeholder-gray-500 dark:placeholder-slate-400 w-64 dark-transition ${
-                    isSearching ? 'text-blue-700 dark:text-blue-300' : ''
+                  className={`absolute  border-none outline-none bg-transparent text-gray-700  dark:text-slate-200 placeholder-gray-500 dark:placeholder-slate-400 w-64 dark-transition ${
+                    isSearching ? 'text-white dark:text-blue-300' : ''
                   }`}
                   style={{
                     borderBottom: searchQuery.length >= 2 
@@ -410,7 +410,7 @@ const DashboardPage = () => {
             <span>{t.bookmarks || 'Bookmarks'}</span>
             <ChevronDown className="w-3 h-3" />
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 cursor-pointer hover:text-gray-800 dark:hover:text-slate-100 dark-transition">
+          <div className="max-sm:hidden flex items-center gap-2 text-sm text-gray-600 dark:text-slate-300 cursor-pointer hover:text-gray-800 dark:hover:text-slate-100 dark-transition">
             <Grid3X3 className="w-4 h-4" />
             <span>{t.sheets || 'Sheets'}</span>
             <ChevronDown className="w-3 h-3" />
@@ -420,7 +420,7 @@ const DashboardPage = () => {
       
       <div id="dashboard-content" className="px-6 py-2 bg-white dark:bg-slate-900 dark-transition">
         {/* Title Bar */}
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center justify-between mb-2 max-sm:hidden">
           <div className="flex items-center gap-4">
             <div className="w-6 h-6 bg-white dark:bg-slate-800 rounded-lg shadow-sm dark:shadow-slate-700/50 flex items-center justify-center border dark:border-slate-700 dark-transition">
               <div className="w-3 h-3 bg-gradient-to-br from-red-400 to-orange-400 rounded-full"></div>
@@ -445,11 +445,11 @@ const DashboardPage = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-9">
+        <div className="grid grid-cols-12 gap-6 sm:gap-2">
+          <div className="lg:col-span-9 md:col-span-7  max-md:col-span-12">
             <DataVisualization barDataByKPI={data.barDataByKPI} kpiData={data.kpiData} />
           </div>
-          <div className="col-span-3">
+          <div className="lg:col-span-3 md:col-span-5 max-md:col-span-12">
             <Sidebar/>
           </div>
         </div>

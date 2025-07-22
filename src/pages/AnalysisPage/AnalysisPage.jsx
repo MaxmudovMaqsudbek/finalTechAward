@@ -47,10 +47,10 @@ export const AnalysisPage = () => {
     }
   }, [analysisResult, currentStep]);
   return (
-    <main className="p-6 space-y-6">
+    <main className="p-6 space-y-6 max-sm:px-4">
       <Card>
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 ">
             <div className="flex items-center gap-2">
               <label
                 htmlFor="lotId"
@@ -65,7 +65,7 @@ export const AnalysisPage = () => {
                   value={lotId}
                   onChange={(e) => setLotId(e.target.value)}
                   placeholder="Insert lot ID and check manually"
-                  className="pl-4 pr-12 py-2 w-84 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="pl-4 pr-12 py-2 w-84 max-sm:w-48 max-sm:pr-6 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
                   type="submit"
